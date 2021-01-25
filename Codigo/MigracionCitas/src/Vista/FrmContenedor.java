@@ -20,7 +20,6 @@ public class FrmContenedor extends javax.swing.JFrame {
         JDesktopPaneSistema = new javax.swing.JDesktopPane();
         JMenuBar = new javax.swing.JMenuBar();
         JMenuGenerarCita = new javax.swing.JMenu();
-        JMenuVerificarDPI = new javax.swing.JMenu();
         JMenuSalirSistema = new javax.swing.JMenu();
 
         jMenuItem1.setText("jMenuItem1");
@@ -40,16 +39,6 @@ public class FrmContenedor extends javax.swing.JFrame {
             }
         });
         JMenuBar.add(JMenuGenerarCita);
-
-        JMenuVerificarDPI.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Archivos/gtk-new.png"))); // NOI18N
-        JMenuVerificarDPI.setText("Verificación DPI");
-        JMenuVerificarDPI.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        JMenuVerificarDPI.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                JMenuVerificarDPIGenerarCita(evt);
-            }
-        });
-        JMenuBar.add(JMenuVerificarDPI);
 
         JMenuSalirSistema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Archivos/application-exit.png"))); // NOI18N
         JMenuSalirSistema.setText("Salir del sistema");
@@ -88,12 +77,6 @@ public class FrmContenedor extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_SalirSistema
 
-    private void JMenuVerificarDPIGenerarCita(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JMenuVerificarDPIGenerarCita
-        FrmVerificarDPI frmVerificarDPI = new FrmVerificarDPI();
-        JDesktopPaneSistema.add(frmVerificarDPI);
-        frmVerificarDPI.setVisible(true);
-    }//GEN-LAST:event_JMenuVerificarDPIGenerarCita
-
     public static void main(String args[]) {
         
         /*Por: Diego Vásquez
@@ -116,7 +99,6 @@ public class FrmContenedor extends javax.swing.JFrame {
     private javax.swing.JMenuBar JMenuBar;
     private javax.swing.JMenu JMenuGenerarCita;
     private javax.swing.JMenu JMenuSalirSistema;
-    private javax.swing.JMenu JMenuVerificarDPI;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;
     // End of variables declaration//GEN-END:variables
