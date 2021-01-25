@@ -21,10 +21,4 @@ public class DPI {
     {
       return 0;  
     }
-    }
-package Controlador;
-
-//TRABAJADA POR: CARLOS
-public class DPI {
-    
 }

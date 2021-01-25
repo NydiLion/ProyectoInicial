@@ -16,13 +16,9 @@ public class FrmContenedor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
-        JDesktopPaneSistema = new javax.swing.JDesktopPane();
-
         JDesktop = new javax.swing.JDesktopPane();
-
         JMenuBar = new javax.swing.JMenuBar();
         JMenuGenerarCita = new javax.swing.JMenu();
         JMenuSalirSistema = new javax.swing.JMenu();
@@ -65,11 +61,7 @@ public class FrmContenedor extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-
-            .addComponent(JDesktopPaneSistema, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
-
             .addComponent(JDesktop, javax.swing.GroupLayout.DEFAULT_SIZE, 415, Short.MAX_VALUE)
-
         );
 
         pack();
