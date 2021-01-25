@@ -6,7 +6,6 @@
 package Controlador;
 
 import Modelo.ConexionRENAP;
-import Vista.FrmVerificarDPI;
 
 /**
  *
