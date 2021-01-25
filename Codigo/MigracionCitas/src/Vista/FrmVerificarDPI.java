@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Vista;
-
 /**
  *
  * @author diego
@@ -41,7 +40,7 @@ public class FrmVerificarDPI extends javax.swing.JInternalFrame {
         JLabelTitulo.setText("Número de DPI");
 
         JBtnVerificar.setText("Verificar");
-        JBtnVerificar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -70,6 +69,10 @@ public class FrmVerificarDPI extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JBtnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBtnVerificarActionPerformed
+      
+    }//GEN-LAST:event_JBtnVerificarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

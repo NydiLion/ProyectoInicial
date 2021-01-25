@@ -1,9 +1,6 @@
 package Modelo;
 
-/**
- *
- * @author diego
- */
+//TRABAJADA POR: CARLOS
 public class ConexionRENAP {
     
 }
