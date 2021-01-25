@@ -6,18 +6,23 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 public class FrmContenedor extends javax.swing.JFrame {
-
+   
     public FrmContenedor() {
         initComponents();
+        
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         JDesktopPaneSistema = new javax.swing.JDesktopPane();
+
+        JDesktop = new javax.swing.JDesktopPane();
+
         JMenuBar = new javax.swing.JMenuBar();
         JMenuGenerarCita = new javax.swing.JMenu();
         JMenuSalirSistema = new javax.swing.JMenu();
@@ -56,11 +61,15 @@ public class FrmContenedor extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JDesktopPaneSistema, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+            .addComponent(JDesktop, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+
             .addComponent(JDesktopPaneSistema, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
+
+            .addComponent(JDesktop, javax.swing.GroupLayout.DEFAULT_SIZE, 415, Short.MAX_VALUE)
+
         );
 
         pack();
@@ -68,9 +77,9 @@ public class FrmContenedor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void GenerarCita(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GenerarCita
-        FrmCitas frmCitas = new FrmCitas();
-        JDesktopPaneSistema.add(frmCitas);
-        frmCitas.setVisible(true);
+        FrmVerificarBoleta frmBoleta = new FrmVerificarBoleta();
+        JDesktop.add(frmBoleta);
+        frmBoleta.setVisible(true);
     }//GEN-LAST:event_GenerarCita
 
     private void SalirSistema(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirSistema
@@ -78,24 +87,22 @@ public class FrmContenedor extends javax.swing.JFrame {
     }//GEN-LAST:event_SalirSistema
 
     public static void main(String args[]) {
-        
+
         /*Por: Diego Vásquez
         Utilización de Libreria FlatLaF para Interfaz Gráfica de Usuario*/
-        
-        try{
+        try {
             UIManager.setLookAndFeel(new FlatLightLaf());
-        }
-        catch(UnsupportedLookAndFeelException ex){
+        } catch (UnsupportedLookAndFeelException ex) {
             JOptionPane.showMessageDialog(null, "Error Interfaz Gráfica", "Error", JOptionPane.ERROR_MESSAGE);
         }
-        
+
         java.awt.EventQueue.invokeLater(() -> {
             new FrmContenedor().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane JDesktopPaneSistema;
+    private javax.swing.JDesktopPane JDesktop;
     private javax.swing.JMenuBar JMenuBar;
     private javax.swing.JMenu JMenuGenerarCita;
     private javax.swing.JMenu JMenuSalirSistema;

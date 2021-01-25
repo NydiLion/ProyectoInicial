@@ -1,4 +1,5 @@
 package Modelo;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -8,6 +9,10 @@ import java.util.logging.Logger;
  *
 //realizado por Carlos Castillo (CarlosCastillo97)
  */
+
+
+//TRABAJADA POR: CARLOS
+
 public class ConexionRENAP {
     private final String base = "RENAP";
     private final String user = "root";
