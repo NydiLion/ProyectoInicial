@@ -4,10 +4,15 @@
  * and open the template in the editor.
  */
 package Vista;
-
+import Controlador.DPI;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
 /**
  *
- * @author diego
+ * @author CarlosCastillo97
  */
 public class FrmVerificarDPI extends javax.swing.JInternalFrame {
 
@@ -39,7 +44,12 @@ public class FrmVerificarDPI extends javax.swing.JInternalFrame {
         JLabelTitulo.setText("Número de DPI");
 
         JBtnVerificar.setText("Verificar");
-        JBtnVerificar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JBtnVerificar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        JBtnVerificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBtnVerificarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,6 +78,33 @@ public class FrmVerificarDPI extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JBtnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBtnVerificarActionPerformed
+
+     try{
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/RENAP", "root", "");
+            PreparedStatement pst = cn.prepareStatement("select * from Persona where Num_DPI = ?");
+            pst.setString(1, JTxtNumDPI.getText().trim());
+            
+            ResultSet rs = pst.executeQuery();
+            
+            if(rs.next()){
+                JOptionPane.showMessageDialog(null,"El DPI es Correcto");
+                String RENAP_Nomb="", RENAP_ApeP="", RENAP_ApeM="", RENAP_DPI="";
+                RENAP_Nomb = (rs.getString("Nombres_Persona"));
+                RENAP_ApeP = (rs.getString("Apellido_Paterno"));
+                RENAP_ApeM = (rs.getString("Apellido_Materno"));
+                RENAP_DPI = (rs.getString("Num_DPI"));
+                
+            } else {
+                JOptionPane.showMessageDialog(null, "Usuario no registrado.");
+              
+            }
+            
+        }catch (Exception e){
+            
+        }
+    }//GEN-LAST:event_JBtnVerificarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
