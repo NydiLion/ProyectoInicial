@@ -31,19 +31,16 @@ public class FrmVerificarDPI extends javax.swing.JInternalFrame {
         JBtnVerificar = new javax.swing.JButton();
 
         setClosable(true);
+        setMaximizable(true);
         setResizable(true);
         setTitle("Verificar DPI");
         setToolTipText("");
+        setVisible(true);
 
         JLabelTitulo.setText("Número de DPI");
 
         JBtnVerificar.setText("Verificar");
-        JBtnVerificar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        JBtnVerificar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JBtnVerificarActionPerformed(evt);
-            }
-        });
+
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
