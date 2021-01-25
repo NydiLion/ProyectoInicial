@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Vista;
-
 /**
  *
  * @author diego
@@ -40,6 +39,11 @@ public class FrmVerificarDPI extends javax.swing.JInternalFrame {
 
         JBtnVerificar.setText("Verificar");
         JBtnVerificar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JBtnVerificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBtnVerificarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,6 +72,10 @@ public class FrmVerificarDPI extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JBtnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBtnVerificarActionPerformed
+      
+    }//GEN-LAST:event_JBtnVerificarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
