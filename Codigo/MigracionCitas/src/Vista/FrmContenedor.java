@@ -16,10 +16,20 @@ public class FrmContenedor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        JDesktopPaneSistema = new javax.swing.JDesktopPane();
+
         JDesktop = new javax.swing.JDesktopPane();
+
         JMenuBar = new javax.swing.JMenuBar();
         JMenuGenerarCita = new javax.swing.JMenu();
         JMenuSalirSistema = new javax.swing.JMenu();
+
+        jMenuItem1.setText("jMenuItem1");
+
+        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Programar Cita Migración");
@@ -55,7 +65,11 @@ public class FrmContenedor extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+
+            .addComponent(JDesktopPaneSistema, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
+
             .addComponent(JDesktop, javax.swing.GroupLayout.DEFAULT_SIZE, 415, Short.MAX_VALUE)
+
         );
 
         pack();
@@ -92,5 +106,7 @@ public class FrmContenedor extends javax.swing.JFrame {
     private javax.swing.JMenuBar JMenuBar;
     private javax.swing.JMenu JMenuGenerarCita;
     private javax.swing.JMenu JMenuSalirSistema;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuItem jMenuItem1;
     // End of variables declaration//GEN-END:variables
 }
