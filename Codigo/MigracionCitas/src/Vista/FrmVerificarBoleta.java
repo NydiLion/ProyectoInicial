@@ -1,9 +1,14 @@
 package Vista;
-import Controlador.Boleta;
+//import Controlador.Boleta;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
 
 /**
  *
- * @author diego
+ * @author nayre
  */
 public class FrmVerificarBoleta extends javax.swing.JInternalFrame {
 
@@ -63,7 +68,25 @@ public class FrmVerificarBoleta extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JBtnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBtnVerificarActionPerformed
-        
+    //**Codigo que permite consultar registros en la base de datos
+        try{
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/banrural", "root", "");
+            PreparedStatement pst = cn.prepareStatement("select * from banrural where ID = ?");
+            pst.setString(1, JTxtNumBoleta.getText().trim());
+            
+            ResultSet rs = pst.executeQuery();
+            
+            if(rs.next()){
+          
+                JTxtNumBoleta.setText(rs.getString("numero_boleta"));    ///* se  busca en la base de datos el numero de boleta
+                
+            } else {
+                JOptionPane.showMessageDialog(null, "Boleta No Pagada.");
+            }
+            
+        }catch (Exception e){
+            
+        }    
     }//GEN-LAST:event_JBtnVerificarActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
